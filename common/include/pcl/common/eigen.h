@@ -112,7 +112,7 @@ namespace pcl
   template<> inline long double
   sqrt<long double> (const long double &val)
   {
-    return (::sqrtl (val));
+    return (::sqrt (val));
   }
 
   /** \brief Compute the roots of a quadratic polynom x^2 + b*x + c = 0

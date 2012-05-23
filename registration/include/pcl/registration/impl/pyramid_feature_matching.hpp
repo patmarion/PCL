@@ -143,6 +143,10 @@ pcl::PyramidFeatureHistogram<PointFeature>::PyramidFeatureHistogramLevel::initia
   hist.resize (total_vector_size, 0);
 }
 
+#ifndef log2f
+#define log2f(n) (logf(n)/logf(2))
+#endif
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointFeature> bool
