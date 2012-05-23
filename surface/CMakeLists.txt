@@ -26,7 +26,7 @@ if(build)
             )
     endif(QHULL_FOUND)
     
-    if (VTK_FOUND AND NOT ANDROID_NDK)
+    if (VTK_FOUND AND VTK_MAJOR_VERSION LESS 6)
         set(VTK_USE_FILE ${VTK_USE_FILE} CACHE INTERNAL "VTK_USE_FILE")
         include (${VTK_USE_FILE})
         
